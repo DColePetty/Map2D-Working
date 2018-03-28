@@ -66,6 +66,8 @@ public class Map2D
       for(int col=9; col > 0; col--)
       {
         if(map[row][col] == 'C') {map[row][col] = ' '; return;}
+        //if(map[row][0] == 'C') {map[row][0] = ' '; return;}
+        //if(map[0][col] == 'C') {map[row][0] = ' '; return;}
       }
     }
   }
@@ -353,6 +355,7 @@ public class Map2D
       currentPotions++;
       AddCoins(); 
       PLAY();  
+      DeleteExtraC();
       PrintMap();}
   }while(characterHealthPoints > 0);
   System.out.println("******************************");
